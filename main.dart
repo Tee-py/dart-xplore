@@ -8,8 +8,9 @@ main() {
   func(name);
   typeCasting();
 
-  Animal dog = new Animal();
-  dog.setName("PitBull");
+  Animal dog = new Animal("PitBull");
+  print(dog.toString());
+  dog.setName("German Shepherd");
   print(dog.toString());
 }
 
@@ -39,6 +40,10 @@ class Animal {
   static String type = "Mammal";
 
   String _name;
+
+  Animal(String name) {
+    this._name = name;
+  }
 
   static String info() {
     return "This is an animal class with type $type";
